@@ -235,7 +235,7 @@
         this.$emit('update:startIndex', nextIndex)
       },
       addTab (item) {
-        const index = this.$slots.default.indexOf(item.$vnode)
+        const index = this.$slots.default.indexOf(item.$vnode)+1
         item.tabId = `${item.title.replace(/ /g, '')}${index}`
         this.tabs.splice(index, 0, item)
         // if a step is added before the current one, go to it
